@@ -18,6 +18,8 @@ function gemValue() {
 
 function target() {
     targetScore = Math.ceil(Math.random() * 61) + 40;
+    $("#target").text("Target Number: " + targetScore); 
+    $("#current").text("Current Total: " + currentScore);
 }
 
 $(document).ready(function() {
