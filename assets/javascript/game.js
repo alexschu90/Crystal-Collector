@@ -7,7 +7,7 @@ let wins = 0;
 let losses = 0; 
 
 let targetScore; 
-let currentScore; 
+let currentScore = 0; 
 
 function gemValue() {
     blue = Math.floor(Math.random() * 11);
@@ -16,9 +16,15 @@ function gemValue() {
     pink = Math.floor(Math.random() * 11);
 }
 
+function target() {
+    targetScore = Math.ceil(Math.random() * 61) + 40;
+}
+
 $(document).ready(function() {
 
     $("#start").click(function(){
         //once start is clicked, run random generator functions
+        gemValue();
+        target();
     }); 
 });
